@@ -32,7 +32,7 @@ spec:
 #                   key: JWT_SECRET
 #                   name: montreal-secret
       initContainers:
-        - name: init-mydb
+        - name: init-server
           image: busybox
           command: [ 'sh', '-c', 'until nslookup web-server.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done;' ]
           # here we wait for the mongodb svc to start up first, as our app depends on it.
