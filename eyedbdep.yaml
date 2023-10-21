@@ -37,7 +37,7 @@ spec:
       nodeSelector:
         zone: us-east-2a  # to indicate which zone we want our pods to run, should be same with the zone our volume is.
       volumes:
-        - name: eyedb-db-data
+        - name: eye-db-data
           awsElasticBlockStore:
             volumeID: vol-0a18b5b48b27ac034
             fsType: ext4
