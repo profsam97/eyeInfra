@@ -19,7 +19,7 @@ spec:
           image: mongo
           volumeMounts:
             - mountPath: /var/lib/mongodb
-              name: montreal-db-data
+              name: eye-db-data
           ports:
             - containerPort: 27017
               name: eyedb-port

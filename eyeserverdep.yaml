@@ -19,7 +19,7 @@ spec:
           image: 154114/server
           ports:
             - containerPort: 5000
-              name: montreal-port
+              name: eyeserver-port
           env:
             - name: MONGO_URL
               valueFrom:
