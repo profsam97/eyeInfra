@@ -39,7 +39,7 @@ spec:
       volumes:
         - name: eyedb-db-data
           awsElasticBlockStore:
-            volumeID: vol-0ec5b25c832a8189c
+            volumeID: vol-0a18b5b48b27ac034
             fsType: ext4
       initContainers:
         - name: busybox
