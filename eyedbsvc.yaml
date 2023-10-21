@@ -5,8 +5,8 @@ metadata:
 spec:
   ports:
     - port: 27017
-      targetPort: montrealdb-port
+      targetPort: eyedb-port
       protocol: TCP
   type: ClusterIP
   selector:
-    app: montrealdb
+    app: eyedb
