@@ -16,21 +16,16 @@ spec:
     spec:
       containers:
         - name: eyeapp
-          image: 154114/server
+          image: 154114/eyefront
           ports:
             - containerPort: 3000
               name: eyeapp-port
-#          env:
-#            - name: Mongo_URL
-#              valueFrom:
-#                secretKeyRef:
-#                  key: Mongo_URL
-#                  name: montreal-secret
-#            -  name: JWT_SECRET
-#               valueFrom:
-#                 secretKeyRef:
-#                   key: JWT_SECRET
-#                   name: montreal-secret
+          env:
+            - name: SERVER
+              valueFrom:
+                secretKeyRef:
+                  key: SERVER
+                  name: eye-secret
       initContainers:
         - name: init-server
           image: busybox
