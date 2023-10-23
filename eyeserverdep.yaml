@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: eyeserver
-          image: 154114/eye-server
+          image: 154114/eyeserver
           ports:
             - containerPort: 5000
               name: eyeserver-port
