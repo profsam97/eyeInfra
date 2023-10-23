@@ -21,7 +21,7 @@ spec:
             - containerPort: 3000
               name: eyeapp-port
           env:
-            - name: SERVER
+            - name: NEXT_PUBLIC_SERVER
               valueFrom:
                 secretKeyRef:
                   key: SERVER
