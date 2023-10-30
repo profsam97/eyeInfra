@@ -7,6 +7,6 @@ spec:
     - port: 5000
       targetPort: eyeserver-port
       protocol: TCP
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: eyeserver
