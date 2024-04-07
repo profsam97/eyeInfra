@@ -35,11 +35,11 @@ spec:
                    key: MONGO_INITDB_ROOT_PASSWORD
                    name: eye-secret
       nodeSelector:
-        zone: us-east-2a  # to indicate which zone we want our pods to run, should be same with the zone our volume is.
+        zone: us-east-1a  # to indicate which zone we want our pods to run, should be same with the zone our volume is.
       volumes:
         - name: eye-db-data
           awsElasticBlockStore:
-            volumeID: vol-01b164858b91f60d3
+            volumeID: vol-05d1a6572b3be24db
             fsType: ext4
       initContainers:
         - name: busybox
