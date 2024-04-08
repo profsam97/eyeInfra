@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: eyeapp
-          # image: {{ .Values.eyeapp }}
-          image: 154114/eyefront-app
+          image: {{ .Values.eyeapp }}
+          # image: 154114/eyefront-app
           ports:
             - containerPort: 3000
               name: eyeapp-port
@@ -31,4 +31,4 @@ spec:
         - name: init-server
           image: busybox
           command: [ 'sh', '-c', 'until nslookup web-server.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done;' ]
-          # here we wait for the mongodb svc to start up first, as our app depends on it.
+          # here we wait for the backend svc to start up first, as our app depends on it.
